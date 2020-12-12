@@ -1,0 +1,154 @@
+
+
+    <!-- <h1 style="text-align:center">ORDERS</h1>
+    <style>
+        table, th, td {
+          border: 7px solid rgb(94, 13, 131);
+          border-collapse: collapse;
+          padding: 15px;
+          border-spacing: 5px;
+        }
+        </style>
+    
+   
+
+        <body>
+
+        <table style="width:90%">
+            <tr>
+                
+        
+            <tr>
+                
+               <th>ORDER ID</th>
+               <th>ORDER STATUS</th>
+               <th>CUSTOMER ID</th>
+               <th> TOTAL AMOUNT</th>
+               <th>QUANTITY</th>
+                 
+            <tr *ngFor="let order of orderDetails">
+            <td style="text-align:center">{{order.orderId}}</td>
+            <td style="text-align:center">{{order.orderStatus}}</td>
+            <td style="text-align:center">{{order.customerId}}</td>
+            <td style="text-align:center">{{order.totalAmount}}</td> 
+            <td style="text-align:center">{{order.quantity}}</td>
+            </tr>
+        
+        
+      
+    
+  </table>
+</body>
+
+<br>
+<br>
+<br>
+
+
+<h1 style="text-align:center">PLACE ORDER</h1>
+
+<form #orderForm="ngForm" (ngSubmit)="placeOrder(orderForm)"> 
+    
+    Enter Order Id:<input type="text" name="orderId" id="orderId" #orderId="ngModel"  ngModel ><br>
+    <br>
+    Enter Quanity:<input type="text" name="quantity" id="quantity" ngModel #quantity="ngModel"><br>
+    <br>
+    
+    <input type="submit" value="submit"> <br>
+</form>
+
+
+
+<br>
+<br>
+<br> -->
+
+
+
+<p>order works!</p>
+
+
+<!-- <div *ngFor= "let order of orderDetails">
+    {{order.id}}
+    {{order.orderStatus}}
+    {{order.customerId}}
+    {{order.totalAmount}}
+    {{order.quantity}}
+</div> -->
+
+<style>
+  body{
+background-image:url('C:\Users\dell\Downloads.jpeg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+  }
+     table, th, td {
+        border: 4px solid pink;
+        border-collapse: collapse;
+        padding: 10px;
+        border-spacing: 4px;
+      }
+      </style>
+
+<div class = "bg">
+  <form #orderForm="ngForm" (ngSubmit)="placeOrder(orderForm)">
+    Enter the Food ID:<input type="text"  name="fid" #fid="ngModel" ngModel ><br><br>
+    Enter the Quantity:<input type="text"  name="qty" #qty="ngModel" ngModel ><br><br>
+    <input type="submit" value="Place Order "> 
+</form>
+    <table border="1" align ="center">
+    
+    <thead>
+    
+    <tr>
+    
+    <th>Order ID</th>
+    
+    <th>Order Status</th>
+    
+    <th>Customer ID</th>
+    
+    <th>Total Amount</th>
+
+    <th>Quantity</th>
+    
+    </tr>
+    
+    </thead>
+    <tbody>
+      <tr *ngFor='let order of orderDetails'>
+       
+        <td>
+          <h5>{{order.id}}</h5>
+        </td>
+        <td>
+          <h5>{{order.orderStatus}}</h5>
+        </td>
+        <td>
+          <h5>{{order.customerId}}</h5>
+        </td>
+        <td>
+          <h5>{{order.totalAmount}}</h5>
+        </td>
+        <td>
+          <h5>{{order.quantity}}</h5>
+        </td>
+        
+              
+        
+        
+      </tr>
+      <!-- <tr *ngIf="!order || order.length==0">
+        <td colspan="5">
+          
+        </td>
+      </tr> -->
+    </tbody>
+    </table>
+    <br>
+{{message}}
+    </div>
+
+
+

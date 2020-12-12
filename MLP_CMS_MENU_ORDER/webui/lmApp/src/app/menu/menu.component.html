@@ -1,0 +1,132 @@
+<!-- 
+<h1 style="text-align:center">CANTEEN MANAGEMENT SYSTEM</h1>
+<h2 style="text-align:center">MENU LIST</h2>
+    
+        
+
+<style>
+    body{
+background-image:url('C:\Users\dell\Downloads.jpeg');
+background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+    }
+       table, th, td {
+          border: 7px solid orange;
+          border-collapse: collapse;
+          padding: 15px;
+          border-spacing: 5px;
+        }
+        </style> <body>
+        <table style="width:100%">
+            <tr>
+                
+        
+            <tr>
+                <th style="text-align:center">FoodId</th>
+                <th style="text-align:center"> FoodName</th>
+                <th style="text-align:center">FoodType</th>
+                <th style="text-align:center">Price</th>
+            </tr>
+
+            <tr *ngFor="let menu of menuDetails">
+                <td style="text-align:center">{{menu.foodId}}</td> 
+                <td style="text-align:center">{{menu.foodName}</td> 
+                <td style="text-align:center">{{menu.foodType}}</td> 
+                <td style="text-align:center">{{menu.price}}</td>
+             </tr>
+             
+             
+             </table>
+             </body>
+             <br><br>
+ -->
+
+
+
+
+ <p>
+  menu works!
+</p>
+
+<br>
+<div style="text-align:left">
+<h2>
+
+Menu List
+</h2>
+
+</div>
+<style>
+  body{
+background-image:url('C:\Users\dell\Downloads.jpeg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+  }
+     table, th, td {
+        border: 4px solid green;
+        border-collapse: collapse;
+        padding: 10px;
+        border-spacing: 4px;
+      }
+      </style>
+<br>
+
+
+
+<!-- <div *ngFor="let menu of menuDetails">
+  {{menu.foodId}}
+  {{menu.foodName}}
+  {{menu.foodType}}
+  {{menu.price}}
+</div> -->
+
+<div class = "bg">
+
+  <table border="1" align ="left">
+  
+  <thead>
+  
+  <tr>
+  
+  <th>Food ID</th>
+  
+  <th>Food Name</th>
+  
+  <th>Food Type</th>
+  
+  <th>Price</th>
+  
+  </tr>
+  
+  </thead>
+  <tbody>
+    <tr *ngFor='let menu of menuDetails'>
+     
+      <td>
+        <h5>{{menu.foodId}}</h5>
+      </td>
+      <td>
+        <h5>{{menu.foodName}}</h5>
+      </td>
+      <td>
+        <h5>{{menu.foodType}}</h5>
+      </td>
+      <td>
+        <h5>{{menu.price}}</h5>
+      </td>
+      <td>
+        <h5></h5>
+      </td>
+    </tr>
+    <!-- <tr *ngIf="!menus || menus.length==0">
+      <td colspan="5">
+        
+      </td>
+    </tr> -->
+  </tbody>
+  </table>
+  
+  </div>
+  <br>
